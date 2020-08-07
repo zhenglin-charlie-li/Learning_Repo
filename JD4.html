@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jd4</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1986991_e1sw8zotmbm.css">
+    <style type="text/css">
+        img{
+            width: 590px;
+            height: 470px;
+        }
+        .img-list{
+            width: 590px;
+            height: 470px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .img-list li{
+            position: absolute;
+        }
+        .img-list li:nth-child(1){
+            z-index: 1;
+        }
+        .pointer{
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            z-index: 9999;
+        }
+        a :hover{
+            background-color: #bfa;
+        }
+        a{
+            border-radius: 50%;
+            margin: 0 4px;
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <ul class="img-list">
+        <li><a href="#"><img src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg"></a></li>
+        <li><a href="#"><img src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1906469856,4113625838&fm=26&gp=0.jpg"></a></li>
+        <li><a href="#"><img src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3984473917,238095211&fm=26&gp=0.jpg"></a></li>
+
+        <div class="pointer">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+    </ul>
+<span class="iconfont icon-xianxingsvggeshiyimeitubiao-24" style="font-size: 300px"></span>
+</body>
+</html>
