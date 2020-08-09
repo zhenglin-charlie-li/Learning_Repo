@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM</title>
+    <script>
+        var choice = 1;
+        var balance = 100;
+        while (choice != 4) {
+            choice = prompt('please choose a choice\n'
+                + '1 to take in money\n'
+                + '2 to take out money\n'
+                + '3 to show the balance\n'
+                + '4 to exit\n')-0;
+            switch (choice) {
+                case 1:
+                    balance += prompt('how many you want to take in')-0;
+                    break;
+
+                case 2:
+                    var moneyOut = prompt('how many you want to take out')-0;
+                    if (moneyOut>balance){
+                        alert('Not Enough Money');
+                    }else {
+                        balance -=moneyOut;
+                        break;
+                    }
+                case 3:
+                    alert('you have '+balance);
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
