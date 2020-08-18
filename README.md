@@ -1,4 +1,14 @@
 # learning-miniapp-couldDevelopment
+
+我的邮箱：1125806272@qq.com
+我的博客：<http://9pshr3.coding-pages.com/>
+或<https://zhenglin-li.github.io/>
+我的csdn：<https://me.csdn.net/Panda325>
+我的简书：<https://www.jianshu.com/u/e2d945027d3f>
+我的今日头条：<https://www.toutiao.com/c/user/4004188138/#mid=1592553312231438>
+我的博客园：<https://www.cnblogs.com/zhenglin-li/>
+
+
 微信小程序和后台交互扫盲：https://www.bilibili.com/video/BV1jt411E7au
 
 云开发：https://www.bilibili.com/video/BV1pE411C7Ca?from=search&seid=14303234966957086491
