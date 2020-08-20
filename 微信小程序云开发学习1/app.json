@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/cloudfunctionVSdatabaseAPI/cloudfunctionVSdatabaseAPI",
-    "pages/getopenid/getopenid",
-    "pages/index/index"
+    "pages/index/index","pages/cloudfunctionVSdatabaseAPI/cloudfunctionVSdatabaseAPI",
+    "pages/getopenid/getopenid"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
