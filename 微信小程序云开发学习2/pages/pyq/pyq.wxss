@@ -1,0 +1,7 @@
+.text{
+  /* height: 100rpx;
+  line-height: 100rpx; */
+  width: 100%;
+  font-size: 60rpx;
+  background-color: #bfa;
+}
