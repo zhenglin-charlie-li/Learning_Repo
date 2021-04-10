@@ -1,0 +1,9 @@
+/* pages/caculator/collection/collection.wxss */
+page{
+  background: #fff;
+}
+.cu-list.menu-avatar>.cu-item .action {
+	width: 130rpx;
+	text-align: center
+}
+

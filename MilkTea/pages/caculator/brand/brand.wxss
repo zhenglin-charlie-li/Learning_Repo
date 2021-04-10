@@ -1,0 +1,4 @@
+/* pages/component/nav/nav.wxss */
+page{
+  background: #fff;
+}

@@ -1,0 +1,8 @@
+/* pages/tips/curve/curve.wxss */
+page{
+    background-image: url(https://k2jo8g.bn.files.1drv.com/y4mGKq2FOsD4eQJ2uapafqYuo9aaG6WorqkOmAd2HszP0MMq-Jmj4aIlC3k-JLLheGLIext93Ak_66FyMiKKtlcGNVJHpq56ys5dgFIEmnpHuZymDop0c-EKnRKrRu1cfsF3kSbuTQSJ4msosvwwk4dx9euUhHULRmSUT0qsbVO5j_D8pMbRDaYam8rJgqJbi7-iWDh5xtfw5JRfLL7JyvJxw?width=256&height=242&cropmode=none)
+  }
+  
+  .radius{
+    border-radius: 20rpx;
+  }

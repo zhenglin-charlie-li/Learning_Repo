@@ -1,0 +1,43 @@
+<!-- pages/caculator/collection/collection.wxml -->
+<view class='cu-custom'>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text>
+      返回
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'></view>
+  </view>
+</view>
+<view class="cu-bar bg-white"></view>
+<view class="cu-bar justify-center bg-white">
+  <view class="action border-title">
+    <text class="text-xl text-bold text-blue">我的收藏</text>
+    <text class="bg-gradual-blue" style="width:3rem"></text>
+  </view>
+</view>
+<view class="cu-list menu-avatar">
+  <view wx:if="{{count == 0}}">
+    <view class="solid-bottom text-xl padding text-center">
+      <text class="text-black text-bold">还没有任何收藏!😓</text>
+    </view>
+  </view>
+  <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{resultList}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
+    <view class="cu-avatar radius l" wx:if="{{item.brand_id}}" style="background-image:url({{item.brand_url}});"></view>
+    <view class="content">
+      <view class="text-grey">{{item.bodyList}}</view>
+      <view class="text-gray text-sm">
+        <text class="cuIcon-infofill text-red">总能量: {{item.totalEnergy}}KJ</text>
+      </view>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-blue round shadow" bindtap="goToItem" data-index="{{index}}">
+        详情
+      </button>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-red round shadow" bindtap="deleteItem" data-index="{{index}}" data-_id="{{item._id}}">
+        删除
+      </button>
+    </view>
+  </view>
+</view>

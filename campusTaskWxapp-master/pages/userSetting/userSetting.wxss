@@ -1,0 +1,145 @@
+/* pages/userSetting/userSetting.wxss */
+
+.basicinfo {
+  position: relative;
+  width: 100%;
+  height: 320rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  background-color: rgba(43, 172, 120, 0.7);
+}
+
+.basicinfo .basicinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.moreinfo {
+  padding: 10rpx;
+  font-size: 14px;
+}
+
+.moreinfo .moreinfo-block {
+  margin: 20rpx;
+  padding: 5rpx;
+  border-radius: 5rpx;
+  border-color: #c0c0c0;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx #eeeeee;
+  background-color: #fff;
+}
+
+.moreinfo .moreinfo-item {
+  /* height: 60rpx; */
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.moreinfo .moreinfo-left {
+  font-weight: bold;
+  margin-left: 6%;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.moreinfo .moreinfo-right {
+  margin-right: 6%;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.moreinfo .empty {
+  width: 15rpx;
+}
+
+.line {
+  background: #e0e3da;
+  width: 100%;
+  height: 5rpx;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 960387 */
+  src: url('//at.alicdn.com/t/font_960387_0jm0wuytxqlp.eot');
+  src: url('//at.alicdn.com/t/font_960387_0jm0wuytxqlp.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_960387_0jm0wuytxqlp.woff') format('woff'),
+  url('//at.alicdn.com/t/font_960387_0jm0wuytxqlp.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_960387_0jm0wuytxqlp.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  margin-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-youjiantou::before {
+  content: "\e731";
+}
+
+.icon-shijian::before {
+  content: "\e603";
+}
+
+.icon-weibiaoti527::before {
+  content: "\e61f";
+}
+
+.icon-yonghuxingshi::before {
+  content: "\e662";
+}
+
+.icon-huobiduihuan::before {
+  content: "\e65b";
+}
+
+.icon-xingbie::before {
+  content: "\e7f8";
+}
+
+.icon-fabu::before {
+  content: "\e70f";
+}
+
+.icon-jieshou::before {
+  content: "\e6ec";
+}
+
+.icon-iconstar::before {
+  color: rgb(255, 238, 0);
+  content: "\e61b";
+}
+
+.icon-iconstar-empty::before {
+  color: rgb(233, 233, 233);
+  content: "\e61b";
+}
+
+.icon-iconstar-half::before {
+  color: rgb(255, 238, 0);
+  content: "\e6f0";
+}
+
+.icon-state::before {
+  content: "\e732";
+}
+
+.icon-phone::before {
+  content: "\e621";
+}

@@ -1,0 +1,48 @@
+<!--pages/me/home/home.wxml-->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-yellow" isBack="{{false}}">
+  <view slot="content">个人页面</view>
+</cu-custom>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">请授权登录</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      授权后才能查看更多个人情况. 取消则返回主页.
+    </view>
+    <view class="cu-bar bg-white justify-center">
+      <view class="action" >
+        <button class="cu-btn line-yellow text-yellow" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-yellow margin-left" open-type="getUserInfo" bindgetuserinfo="login">确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<scroll-view scroll-y class="scrollPage" wx:if="{{hasUserInfo}}">
+  <view class="UCenter-bg">
+    <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class="text-xl">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/me/about/about" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">关于"奶茶Energy"</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/me/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">大创日志</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

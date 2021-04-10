@@ -1,0 +1,21 @@
+<!-- pages/me/about/about.wxml -->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">奶茶Energy💥</view>
+</cu-custom>
+<view class="cu-list menu-avatar comment solids-top">
+  <view class="cu-item" wx:for="{{commentList}}" wx:key>
+    <view class="cu-avatar round" style="background-image:url(https://6d69-milktea-cloud-2saxg-1259785233.tcb.qcloud.la/MilkTea/avatar.jpg?sign=e4547fca96c2362fb990502b23d1f3b0&t=1585458679);"></view>
+    <view class="content">
+      <view class="bg-orange light padding-sm radius margin-top-sm text-sm">
+        <view class="flex">
+          <view class="flex-sub">{{item.question}}</view>
+        </view>
+      </view>
+      <view class="margin-top-sm text-gray text-content text-lg">
+        <text decode="{{true}}">{{item.answer}}</text>
+      </view>
+    </view>
+  </view>
+</view>

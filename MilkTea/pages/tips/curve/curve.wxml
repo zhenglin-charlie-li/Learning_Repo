@@ -1,0 +1,29 @@
+<!-- pages/tips/curve/curve.wxml -->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">关于奶茶</view>
+</cu-custom>
+<!-- 标题 -->
+<view class="cu-bar margin-top">
+    <view class="action sub-title">
+        <text class="cuIcon-title text-orange text-shadow">{{titleCur}}</text>
+        <text class="bg-orange" style="width:2rem"></text>
+    </view>
+</view>
+<!-- 介绍 -->
+<view class="cu-bar margin-lr margin-bottom radius:20rpx text-lg">
+    <parser html="{{text}}" />
+</view>
+<!-- 详细 -->
+<view class="cu-bar bg-white margin-lr radius:20rpx" wx:for="{{brandList}}">
+    <view class="action">
+        <text class="cuIcon-title text-orange"></text>
+        {{item.brand}}
+    </view>
+    <view class="action">
+        <button class="cu-btn bg-red shadow" bindtap="goToItem" data-index="{{item.index}}" data-brand="{{item.brand}}">
+            查看
+        </button>
+    </view>
+</view>

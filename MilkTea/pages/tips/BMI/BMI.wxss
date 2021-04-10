@@ -1,0 +1,4 @@
+/* pages/tips/BMI/BMI.wxss */
+page{
+  background-image: url(https://6d69-milktea-cloud-2saxg-1259785233.tcb.qcloud.la/MilkTea/BMI_bg.png?sign=26d533f9bd305ad6c39ec765a47e505f&t=1585459549)
+}

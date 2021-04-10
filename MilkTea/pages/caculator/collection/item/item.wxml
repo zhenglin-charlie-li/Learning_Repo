@@ -1,0 +1,75 @@
+<!-- pages/caculator/collection/item/item.wxml -->
+<view class='cu-custom'>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text>
+      返回
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'></view>
+  </view>
+</view>
+<view class="cu-bar bg-white"></view>
+<view class="cu-bar justify-center bg-white">
+  <view class="action border-title">
+    <text class="text-xl text-bold text-olive">结果分析</text>
+    <text class="bg-gradual-green" style="width:3rem"></text>
+  </view>
+</view>
+<view class="cu-card case">
+  <view class="cu-item shadow">
+    <view class="image">
+      <text decode="{{true}}">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</text>
+      <image src='../../../../images/item.png' mode='widthFix' class='png' style='width:50%;height:400rpx'></image>
+      <view class="cu-tag bg-green">已收藏</view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <!-- 品牌 -->
+      <view class="cu-item">
+        <view class="content">
+          <text class="text-grey">品牌</text>
+        </view>
+        <view class="action">
+          <view class="cu-avatar radius xl" wx:if="{{item.brand_id}}" style="background-image:url({{item.brand_url}}"></view>
+        </view>
+      </view>
+      <!-- 组成 -->
+      <view class="cu-item">
+        <view class="content">
+          <text class="text-grey">饮品组成</text>
+        </view>
+        <view class="action">
+          <view>{{item.bodyList}}</view>
+          <view>{{item.ingreList}}</view>
+        </view>
+      </view>
+      <!-- 热量 -->
+      <view class="cu-item">
+        <view class="content">
+          <text class="text-grey">热量</text>
+        </view>
+        <view class="action">
+          <text decode="{{true}}" class="text-red text-bold">
+            {{item.sugarBodyEnergy}}KJ + {{item.ingreEnergy}}KJ = {{item.totalEnergy}}KJ&emsp;
+          </text>
+        </view>
+      </view>
+      <!-- 建议 -->
+      <!-- <view class="cu-item" style="height:300rpx;">
+        <view class="content">
+          <text class="text-grey">建议</text>
+        </view>
+        <view class="action">
+          <text decode="{{true}}" class="text-black text-bold">{{item.advice}}</text>
+        </view>
+      </view> -->
+      <view class="cu-item" style="justify-content:center;">
+        <view class="box padding-sm margin-xs bg-white text-center radius">
+          <button class="cu-btn bg-yellow round shadow" bindtap="backToLast">上页</button>
+        </view>
+        <view class="box padding-sm margin-xs bg-white text-center radius">
+          <button class="cu-btn bg-orange round shadow" bindtap="backToWelcome">首页</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

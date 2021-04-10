@@ -1,0 +1,118 @@
+/* pages/orderList/orderList.wxss */
+.task-card {
+  width:100%;
+  margin-top: 10px;
+
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.filter-item {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #666;
+  height:30px;
+  line-height:30px;
+}
+
+.filter-active {
+  color: #5cb48e;
+}
+
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+}
+.description{
+  display: flex;
+  flex-direction: row;
+}
+
+.task-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: auto;
+  text-align: right;
+}
+
+.price{
+  margin-left: auto;
+  text-align: right;
+  color:red
+}
+.task-state{
+  margin-top:10rpx;
+  display: flex;
+  justify-content: space-around;
+  text-align: right;
+  margin-left:auto;
+}
+
+.button {
+  background-color: #5cb48e;
+  color: #fff;
+}
+
+.task-release{
+  width:100%;
+  margin-top:20rpx;
+}
+.task-accept{
+  width:100%;
+  margin-top:20rpx;
+}
+.task-pic {
+  display: flex;
+}
+.slide-image {
+  width: 100%;
+  height: 100px;
+}
+
+.pic-state{
+  width:100%;
+  height:80rpx;
+  display:flex;
+  flex-direction: row;
+}
+
+
+.detail-container {
+  width: 280px;
+  height: 100%;
+  color:#fff;
+  font-size: 16px;
+}
+.detail-tip {
+  font-size: 12px;
+  flex:1;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #eee;
+}
+
+.detail-label {
+  margin-right: 30px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.detail-row {
+  margin: 20px 20px;
+  /* border-bottom: 0.5px solid #ccc; */
+}
+
+.taskImg {
+  width: 100px;
+  height:100px;
+  border: 0.4px solid #ccc;
+  margin: 18px;
+  display: inline-block;
+}

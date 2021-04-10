@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/release/release",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/realse/realse"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

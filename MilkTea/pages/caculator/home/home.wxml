@@ -1,0 +1,24 @@
+<!-- pages/caculator/home/home.wxml -->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-yellow" isBack="{{false}}">
+  <view slot="content">热量计算</view>
+</cu-custom>
+<view class="cu-bar bg-white"></view>
+<view class="cu-bar bg-white">
+  <image src='/images/caculator1.png' mode='widthFix' class='png' style='width:100%;height:300rpx'></image>
+</view>
+<view class="cu-bar bg-white"></view>
+<view class='bg-white'>
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/caculator/{{item.url}}/{{item.url}}" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+</view>
+<view class="cu-bar bg-white">
+  <image src='/images/caculator2.png' mode='widthFix' class='png' style='width:100%;height:300rpx'></image>
+</view>
+<view class="cu-bar bg-white"></view>
+<view class="cu-bar bg-white"></view>

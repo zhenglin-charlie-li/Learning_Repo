@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/release/release",
+    "pages/orderList/orderList",
+    "pages/userSetting/userCoin",
+    "pages/userSetting/userSetting",
+    "pages/userSetting/userModify",
+    "pages/userSetting/userPicture",
+    "pages/modify/modify",
+    "pages/index/right"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#5cb48e",
+    "navigationBarTitleText": "校园互助",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "utils/imgs/home.png",
+        "selectedIconPath": "utils/imgs/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/orderList/orderList",
+        "text": "订单",
+        "iconPath": "utils/imgs/redEnvelope.png",
+        "selectedIconPath": "utils/imgs/redEnvelopeSelected.png"
+      },
+      {
+        "pagePath": "pages/userSetting/userSetting",
+        "text": "个人",
+        "iconPath": "utils/imgs/user.png",
+        "selectedIconPath": "utils/imgs/userSelected.png"
+      }
+    ],
+    "selectedColor": "#5cb48e"
+  },
+  "sitemapLocation": "sitemap.json"
+}

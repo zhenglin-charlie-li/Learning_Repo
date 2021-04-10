@@ -1,0 +1,23 @@
+<view style="padding: 5px;width=100%; display:flex">
+  <!-- see -->
+  <view class="filter-item" bindtap='getTaskByTime'>
+    <text class="{{activeTime}}">最新发布</text>
+  </view>
+  <!-- see -->
+  <view class="filter-item" bindtap='getTaskByMoney'>
+    <text class="{{activeMoney}}">最多酬劳</text>
+  </view>
+  <!-- see -->
+  <view class="filter-item" bindtap='getTask1'>
+    <text class="{{activeget1}}">取件</text>
+  </view>
+  <!-- see -->
+  <view class="filter-item" bindtap='getTask2'>
+    <text class="{{activeget2}}">送餐</text>
+  </view>
+  <!-- realse -->
+  <view class="filter-item" style="margin-left:auto;">
+    <button class="torelease-btn" bindtap="toRelease" size="mini" shape="circle" type="primary" >发布任务</button>
+  </view>
+</view>
+

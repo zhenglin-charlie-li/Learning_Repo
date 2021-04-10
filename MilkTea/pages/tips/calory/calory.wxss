@@ -1,0 +1,4 @@
+/* pages/tips/calory/calory.wxss */
+page{
+  background-image: url(https://6d69-milktea-cloud-2saxg-1259785233.tcb.qcloud.la/MilkTea/calory_bg.png?sign=41bf72e9ec28a963a1ac200c3ba4d3f9&t=1585458689)
+}

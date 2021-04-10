@@ -1,0 +1,31 @@
+<!-- pages/tips/item/item.wxml -->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">关于奶茶</view>
+</cu-custom>
+<!-- 标题 -->
+<!-- 日常tips -->
+<block wx:if="{{titleCur != ''}}">
+  <view class="cu-bar margin-top">
+    <view class="action sub-title">
+      <text class="cuIcon-title text-orange text-shadow">{{titleCur}}</text>
+      <text class="bg-orange" style="width:2rem"></text>
+    </view>
+  </view>
+  <view class="cu-bar margin-lr radius:20rpx text-lg">
+    <parser html="{{tipslist[indexCur]}}" />
+  </view>
+</block>
+<!-- 校正 -->
+<block wx:if="{{brandCur != ''}}">
+  <view class="cu-bar margin-top">
+    <view class="action sub-title">
+      <text class="cuIcon-title text-orange text-shadow">{{brandCur}}</text>
+      <text class="bg-orange" style="width:2rem"></text>
+    </view>
+  </view>
+  <view class="cu-bar margin-lr radius:20rpx text-lg">
+    <parser html="{{imglist[indexCur]}}" />
+  </view>
+</block>

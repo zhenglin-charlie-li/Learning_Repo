@@ -1,0 +1,107 @@
+<!--pages/tips/calory/calory.wxml-->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">BMR&每日能量计算</view>
+</cu-custom>
+
+<form bindsubmit="getBMR" bindreset="cleanBMR" wx:if="{{!BMR}}">
+  <!-- List card-->
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-l shadow-lg radius">
+    <!-- 只需要"class="cu-list menu card-menu",可以无需cu-item,只用使用form-group即可分行-->
+    <view class="cu-form-group">
+      <view class="title">性别</view>
+      <radio-group name="gender" style="flex:1">
+        <label style="margin-left: 10px">男
+          <radio value="man"></radio>
+        </label>
+        <label style="margin-left: 20px">女
+          <radio value="woman"></radio>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">身高</view>
+      <input name="height" placeholder="输入身高(cm)"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">体重</view>
+      <input name="weight" placeholder="输入体重(kg)"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">年龄</view>
+      <input name="age" placeholder="输入年龄"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">
+        <text>活动\n系数</text>
+      </view>
+      <!-- 最后一个form-group中直接放入radio-group -->
+      <radio-group name="activity">
+        <!-- radio-group中直接放入cu-list -->
+        <view class="cu-list menu">
+          <view class="cu-item" wx:for="{{activityList}}" wx:key>
+            <view class="content">
+              <view class="text-grey text-bold">{{item.num}}</view>
+              <view class="text-red text-df">
+                <text>{{item.text}}</text>
+              </view>
+            </view>
+            <view class="action">
+              <radio class="round yellow" value="{{item.num}}"></radio>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <!-- button组应该放在form内,card外-->
+  <view class="margin-top-df" style="display:flex; justify-content:center;">
+    <button form-type="submit" class="margin-xs cu-btn bg-yellow round shadow">确定</button>
+    <button form-type="reset" class="margin-xs cu-btn bg-orange round shadow">清空</button>
+  </view>
+
+</form>
+
+
+<!-- ----------------------------------------计算完成-------------------------------- -->
+
+<block wx:if="{{BMR}}">
+
+  <view class="solid-bottom text-xl" style="padding: 10rpx 40rpx;">
+    <text class="text-black text-bold">您的BMR为(Kcal):</text>
+    <view class="solid-bottom text-xsl padding-xs text-olive text-shadow">
+      <text class="margin-left-l">{{BMR}}</text>
+    </view>
+    <text class="text-black text-bold">您的每日消耗热量为(Kcal):</text>
+    <view class="solid-bottom text-xsl padding-xs text-green text-shadow">
+      <text class="margin-left-l">{{calory}}</text>
+    </view>
+  </view>
+
+
+  <view class="padding text-center">
+    <view class="padding-xl radius shadow bg-white">
+      <text class="text-black text-bold">BMR\n</text>
+      <text class="text-grey">基础代谢率(BMR)是指人体在清醒而又极端安静的状态下，不受肌肉活动、环境温度、食物及精神紧张等影响时的能量代谢率。每天适量的运动有助于提高BMR，而节食会降低BMR。通过性别，年龄，身高和体重能粗略计算BMR</text>
+    </view>
+    <view class="padding-xl radius shadow bg-pink light margin-top">
+      <text class="text-black text-bold">每日消耗卡路里\n</text>
+      <text class="text-grey">BMR仅代表静息能量，通过乘以活动因子（McArdle等1996），最终我们可以知道我们建议每天服用多少卡路里食物，然后调整我们的体重减轻/增重计划。</text>
+    </view>
+  </view>
+
+  <view class="margin-top-df" style="display:flex; justify-content:center;">
+    <button bindtap="cleanBMR" class="margin-xs cu-btn bg-yellow round shadow">重新计算</button>
+  </view>
+
+
+
+
+
+</block>

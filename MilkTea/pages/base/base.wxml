@@ -1,0 +1,31 @@
+<!-- 自定义组件引入 -->
+<welcome wx:if="{{PageCur == 'welcome'}}"></welcome>
+<caculator wx:if="{{PageCur == 'caculator'}}"></caculator>
+<tips wx:if="{{PageCur == 'tips'}}"></tips>
+<me wx:if="{{PageCur == 'me'}}"></me>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="welcome">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/welcome{{PageCur=='welcome'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='welcome'?'text-yellow':'text-gray'}}">主页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="caculator">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/caculator{{PageCur=='caculator'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='caculator'?'text-yellow':'text-gray'}}">计算</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="tips">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/tips{{PageCur=='tips'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='tips'?'text-yellow':'text-gray'}}">工具</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="me">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/me{{PageCur=='me'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='me'?'text-yellow':'text-gray'}}">我的</view>
+  </view>
+</view>

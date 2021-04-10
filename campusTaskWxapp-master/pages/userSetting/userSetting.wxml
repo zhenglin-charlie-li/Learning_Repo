@@ -1,0 +1,103 @@
+<!--pages/userSetting/userSetting.wxml-->
+<view class='basicinfo'>
+  <view class='basicinfo-avatar'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName"></open-data>
+</view>
+
+<view class='moreinfo'>
+  <view class='moreinfo-block'>
+    <navigator class='moreinfo-item' url="./userModify?type=name&value={{userInfo.name}}" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-yonghuxingshi"></text>姓名</text>
+      <text class='moreinfo-right'>{{userInfo.name}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+
+    <view class="line"></view>
+
+    <navigator class='moreinfo-item' url="./userModify?type=gender&value={{userInfo.gender}}" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-xingbie"></text>性别</text>
+      <text class='moreinfo-right'>{{userInfo.gender}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+
+    <view class="line"></view>
+
+    <navigator class='moreinfo-item' url="./userModify?type=phone&value={{userInfo.phone}}" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-phone"></text>手机号码</text>
+      <text class='moreinfo-right'>{{userInfo.phone}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+
+    <view class="line"></view>
+
+    <navigator class='moreinfo-item' url="./userPicture?value={{userInfo.state}}" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-state"></text>用户状态</text>
+      <text class='moreinfo-right'>{{userInfo.state}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+
+    <view class="line"></view>
+
+    <view class='moreinfo-item'>
+      <text class='moreinfo-left'><text class="iconfont icon-shijian"></text>注册时间</text>
+      <text class='moreinfo-right'>{{userInfo.joinDate}}</text>
+      <view class='empty'></view>
+    </view>
+  </view>
+
+  <view class="line"></view>
+
+  <view class='moreinfo-block'>
+    <view class='moreinfo-item'>
+      <text class='moreinfo-left'><text class="iconfont icon-fabu"></text>发布任务次数</text>
+      <text class='moreinfo-right'>{{userInfo.publish_times}}次</text>
+      <view class='empty'></view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class='moreinfo-item'>
+      <text class='moreinfo-left'><text class="iconfont icon-jieshou"></text>接受任务次数</text>
+      <text class='moreinfo-right'>{{userInfo.take_times}}次</text>
+      <view class='empty'></view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class='moreinfo-item'>
+      <text class='moreinfo-left'><text class="iconfont icon-weibiaoti527"></text>评价</text>
+      <text class='moreinfo-right'>
+      <block wx:for='{{starNum}}' >
+        <text class="iconfont icon-iconstar"></text>
+      </block>
+      <text wx:if="{{halfStar}}" class="iconfont icon-iconstar-half"></text>
+      <block wx:for='{{emptyStarNum}}'>
+        <text class="iconfont icon-iconstar-empty"></text>
+      </block>
+      </text>
+      <view class='empty'></view>
+    </view>
+    <!--  -->
+    <view class="line"></view>
+<view class='moreinfo-block'>
+    <navigator class='moreinfo-item' url="./userCoin" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-huobiduihuan"></text>积分</text>
+      <text class='moreinfo-right'>{{userInfo.coins}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+  </view>
+    <!--  -->
+  </view>
+
+  <view class="line"></view>
+
+  <view class='moreinfo-block'>
+    <navigator class='moreinfo-item' url="./userCoin" open-type="navigate">
+      <text class='moreinfo-left'><text class="iconfont icon-huobiduihuan"></text>积分</text>
+      <text class='moreinfo-right'>{{userInfo.coins}}</text>
+      <text class="iconfont icon-youjiantou"></text>
+    </navigator>
+  </view>
+</view>

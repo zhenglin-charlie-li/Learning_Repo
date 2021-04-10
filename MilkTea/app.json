@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/base/base",
+    "pages/welcome/welcome",
+    "pages/caculator/home/home",
+    "pages/caculator/brand/brand",
+    "pages/caculator/menu/menu",
+    "pages/caculator/result/result",
+    "pages/caculator/collection/collection",
+    "pages/caculator/collection/item/item",
+    "pages/nearby/nearby",
+    "pages/tips/home/home",
+    "pages/tips/BMI/BMI",
+    "pages/tips/calory/calory",
+    "pages/tips/list/list",
+    "pages/tips/item/item",
+    "pages/tips/curve/curve",
+    "pages/me/home/home",
+    "pages/me/about/about",
+    "pages/me/log/log"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.5",
+      "provider": "wx50b5593e81dd937a"
+    },
+    "chooseLocation": {
+      "version": "1.0.3",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

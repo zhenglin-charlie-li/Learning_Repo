@@ -1,0 +1,12 @@
+/* pages/caculator/result/result.wxss */
+.cu-list.menu-avatar>.cu-item .content {
+	position: absolute;
+	left: 30rpx;
+	width: calc(100% - 450rpx);
+	line-height: 1.6em;
+  font-weight: bold;
+}
+.cu-list.menu-avatar>.cu-item .action{
+  width: 450rpx;
+  text-align: center;
+}

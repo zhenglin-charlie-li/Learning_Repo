@@ -1,0 +1,117 @@
+<!-- pages/caculator/menu/menu.wxml -->
+<view class='cu-custom'>
+  <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='cuIcon-back'></text>
+      返回
+    </navigator>
+    <view class='content' style='top:{{StatusBar}}px;'></view>
+  </view>
+</view>
+<view class="cu-bar bg-white"></view>
+<view class="cu-bar justify-center bg-white">
+  <view class="action border-title">
+    <text class="text-xl text-bold text-pink">开始搭配</text>
+    <text class="bg-gradual-pink" style="width:3rem"></text>
+  </view>
+</view>
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 300rpx)">
+    <view class="cu-item text-bold {{index==TabCur?'text-green cur':''}}" wx:for="{{category}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 300rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{category}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text>
+          {{item.name}}
+          <text wx:if="{{item.id == 'cup'}}">(不勾选则默认中杯)</text>
+          <text wx:if="{{item.id == 'sugar'}}">(不勾选则默认无糖)</text>
+          <text wx:if="{{item.id == 'material'}}">(可多选)</text>
+        </view>
+      </view>
+      <!-- 主体列表 -->
+      <radio-group wx:if="{{index == 0}}" style="display: block;" bindchange="selectBody">
+        <view class="cu-list menu">
+          <view class="cu-item" wx:for="{{bodyList}}" wx:key>
+            <view class="content">
+              <view class="text-grey">{{item.name}}</view>
+              <view class="text-red">热量:{{item.energy}}千焦/百毫升</view>
+            </view>
+            <view class="action">
+              <radio class="round yellow" value="{{item.energy}}|{{item.name}}|{{item.sugar}}"></radio>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+      <!-- 糖量 -->
+      <radio-group wx:if="{{index == 1}}" style="display: block;" bindchange="selectSugar">
+        <view class="cu-list menu">
+          <view class="cu-item" wx:for="{{sugarList}}" wx:key>
+            <!-- 额外处理烧仙草,coco糖量不全情况 -->
+            <block wx:if="{{item.name != '正常'}}">
+              <view class="content">
+                <view class="text-grey">{{item.name}}</view>
+                <view class="text-red">额外增加:{{item.value*sugarBase}}千焦/百毫升</view>
+              </view>
+              <view class="action">
+                <radio class="round yellow" value="{{item.value}}|{{item.name}}"></radio>
+              </view>
+            </block>
+            <block wx:else>
+              <view class="text-grey">默认为正常/半糖情况</view>
+            </block>
+          </view>
+        </view>
+      </radio-group>
+      <!-- 杯形 -->
+      <radio-group wx:if="{{index == 2}}" style="display: block;" bindchange="selectCup">
+        <view class="cu-list menu">
+          <view class="cu-item" wx:for="{{cupList}}" wx:key>
+            <view class="content">
+              <view class="text-grey">{{item.name}}</view>
+              <view class="text-red">含量:{{item.value*100}}毫升</view>
+            </view>
+            <view class="action">
+              <radio class="round yellow" value="{{item.value}}|{{item.name}}"></radio>
+            </view>
+          </view>
+        </view>
+      </radio-group>
+      <!-- 配料列表 -->
+      <checkbox-group wx:if="{{index == 3}}" style="display: block" bindchange="selectIngre">
+        <view class="cu-list menu">
+          <view class="cu-item" wx:for="{{ingreList}}" wx:key>
+            <view class="content">
+              <view class="text-grey">{{item.name}}</view>
+              <view class="text-red">额外增加:{{item.energy}}千焦/份</view>
+            </view>
+            <view class="action">
+              <checkbox class="round orange" value="{{item.energy}}|{{item.name}}"></checkbox>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+  </scroll-view>
+</view>
+<!-- 底部操作条 -->
+<view class="cu-bar bg-white tabbar border shop">
+  <view class="cu-capsule" style="width:160rpx;">
+    <view class="cu-tag bg-red light ">主体</view>
+    <view class="cu-tag line-red">{{sugarBodyEnergy}}</view>
+  </view>
+  <view class="cu-capsule" style="width:160rpx;">
+    <view class="cu-tag bg-orange light">配料</view>
+    <view class="cu-tag line-orange">{{ingreEnergy}}</view>
+  </view>
+  <view class="cu-capsule" style="width:160rpx;">
+    <view class="cu-tag bg-yellow light">合计</view>
+    <view class="cu-tag line-yellow">{{totalEnergy}}</view>
+  </view>
+  <view class="bg-red submit" style="font-size:30rpx; font-weight: bold;" bindtap="generate">
+    结果生成
+  </view>
+</view>

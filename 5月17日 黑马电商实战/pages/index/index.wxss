@@ -1,0 +1,12 @@
+/* pages/index/index.wxss */
+view{
+    /* 使用主题颜色 */
+    /* color:var(--themeColor); */
+}
+image{
+    width: 100%;
+}
+swiper{
+    width: 750rpx;
+    height: 340rpx;
+}

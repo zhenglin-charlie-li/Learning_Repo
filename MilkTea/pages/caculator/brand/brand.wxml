@@ -1,0 +1,29 @@
+<view class='cu-custom'>
+    <view class="cu-bar fixed bg-shadeTop" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+        <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+            <text class='cuIcon-back'></text>
+            返回
+        </navigator>
+        <view class='content' style='top:{{StatusBar}}px;'></view>
+    </view>
+</view>
+
+<view class="cu-bar bg-white"></view>
+
+<view class="cu-bar justify-center bg-white">
+    <view class="action border-title">
+        <text class="text-xl text-bold text-blue">确定品牌</text>
+        <text class="bg-gradual-blue" style="width:3rem"></text>
+    </view>
+</view>
+
+<view class="cu-list grid col-3 no-border}">
+    <view class="cu-item" hover-class="bg-yellow light" hover-stay-time="500" wx:for="{{brandList}}" wx:key wx:if="{{index<9}}">
+        <view class="flex solid-bottom padding justify-center">
+            <view class="cu-avatar radius xl" style="background-image:url({{item.brand_url}});" data-brand_url="{{item.brand_url}}" data-brand_id="{{item.brand_id}}" data-brand_name="{{item.brand_name}}" bindtap="selectBrand"></view>
+        </view>
+        <view class="flex solid-bottom padding justify-center">
+            <view class="text-black text-bold">{{item.brand_name}}</view>
+        </view>
+    </view>
+</view>

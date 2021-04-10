@@ -1,0 +1,43 @@
+<!-- pages/tips/item/item.wxml -->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-red" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">关于奶茶</view>
+</cu-custom>
+<view class="cu-bar margin-top">
+  <view class="action sub-title">
+    <text class="cuIcon-title text-pink text-shadow">日常贴士</text>
+    <text class="bg-orange" style="width:2rem"></text>
+  </view>
+</view>
+<view class="cu-bar bg-white margin-lr radius:20rpx" wx:for="{{tipList1}}">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text>
+    {{item.title}}
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-orange shadow" bindtap="goToItem" data-index="{{item.index}}" data-title="{{item.title}}">
+      了解
+    </button>
+  </view>
+</view>
+<view class="cu-bar">
+  <view class="action sub-title">
+    <text class="cuIcon-title text-mauve text-shadow">专业指南</text>
+    <text class="bg-orange" style="width:2rem"></text>
+  </view>
+</view>
+<view class="cu-bar bg-white margin-lr radius:20rpx" wx:for="{{tipList2}}">
+  <view class="action">
+    <text class="cuIcon-title text-orange"></text>
+    {{item.title}}
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-orange shadow" wx:if="{{item.index == 6}}" bindtap="goToCurve">
+      了解
+    </button>
+    <button class="cu-btn bg-orange shadow" wx:else bindtap="goToItem" data-index="{{item.index}}" data-title="{{item.title}}">
+      了解
+    </button>
+  </view>
+</view>

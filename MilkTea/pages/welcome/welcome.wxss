@@ -1,0 +1,15 @@
+/* pages/welcome/welcome.wxss */
+/* pages/tips/list/list.wxss */
+page{
+  background-image: url(https://6d69-milktea-cloud-2saxg-1259785233.tcb.qcloud.la/MilkTea/welcome_bg.png?sign=da4e46fbcf76b822f4b305de2975e46b&t=1585458716)
+}
+
+.scrollPage {
+  height: 100vh;
+}
+
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}

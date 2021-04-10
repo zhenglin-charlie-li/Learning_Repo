@@ -1,0 +1,41 @@
+<!--pages/tips/BMI/BMI.wxml-->
+<!-- 顶部操作条 -->
+<cu-custom bgColor="bg-olive" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">BMI测算</view>
+</cu-custom>
+
+
+<form bindsubmit="getBMI" bindreset="cleanBMI">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="content">
+      <view class="cu-form-group">
+        <view class="title">身高</view>
+        <input name="height" placeholder="输入身高(cm)"></input>
+      </view>
+    </view>
+    <view class="content">
+      <view class="cu-form-group">
+        <view class="title">体重</view>
+        <input name="weight" placeholder="输入体重(kg)"></input>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item margin-top-lg" style="display:flex; justify-content:center;">
+    <button form-type="submit" class="margin-xs cu-btn bg-yellow round shadow">确定</button>
+    <button form-type="reset" class="margin-xs cu-btn bg-orange round shadow">清空</button>
+  </view>
+</form>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="content">
+    <view class="solid-bottom text-xl padding" wx:if="{{BMI}}">
+      <text class="text-black text-bold">您的BMI指数为:</text>
+      <view class="solid-bottom text-xsl padding text-{{textColor}}">
+        <text class="margin-left-xl">{{BMI}}</text>
+      </view>
+      <view class="padding">{{advice}}</view>
+      <image src="../../../images/BMI.png" mode="aspectFit" ></image>
+    </view>
+  </view>
+</view>

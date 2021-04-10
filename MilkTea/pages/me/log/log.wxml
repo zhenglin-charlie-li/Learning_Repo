@@ -1,0 +1,19 @@
+<!-- pages/me/log/log.wxml -->
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">日志</view>
+</cu-custom>
+
+<view class="cu-timeline">
+    <view class="cu-item text-orange" wx:for="{{logList}}" wx:key>
+        <view class="bg-orange light content shadow">
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-white text-red">{{item.time}}</view>
+            </view>
+            <view class="margin-top-sm text-content">
+                <view>实验部分👩‍🔬：{{item.lab}}</view>
+                <view>小程序开发👨‍💻：{{item.app}}</view>
+            </view>
+        </view>
+    </view>
+</view>

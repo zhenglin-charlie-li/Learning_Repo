@@ -1,0 +1,8 @@
+{
+  "usingComponents":{
+    "welcome": "/pages/welcome/welcome",
+    "caculator": "/pages/caculator/home/home",
+    "tips": "/pages/tips/home/home",
+    "me": "/pages/me/home/home"
+  }
+}
