@@ -1,2 +1,3 @@
-# leaning-java-itheima
-大一下学的java，做个纪念
+# leaning-java
+
+Some code when learning Java during the second semester of my first year in college.
