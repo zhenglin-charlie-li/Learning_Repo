@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CSdiKdoiUc3xGkfh4VujZCuq93iVMnnAwhXsBZ+ruisBlWreUzdSDa6TngA18ZCOJoJlMvTYtlNrPpH7X8tt9w==",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Projects\\dotnet_toml_Tomlet\\dotnet_toml_Tomlet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\11258\\.nuget\\packages\\samboy063.tomlet\\5.0.0\\samboy063.tomlet.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\dotnet_toml_Tomlet.exe
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\dotnet_toml_Tomlet.deps.json
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\dotnet_toml_Tomlet.runtimeconfig.json
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\dotnet_toml_Tomlet.dll
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\dotnet_toml_Tomlet.pdb
+D:\Documents\Projects\dotnet_toml_Tomlet\bin\Debug\net6.0\Tomlet.dll
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.csproj.AssemblyReference.cache
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.AssemblyInfoInputs.cache
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.AssemblyInfo.cs
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.csproj.CoreCompileInputs.cache
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.csproj.CopyComplete
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.dll
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\refint\dotnet_toml_Tomlet.dll
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.pdb
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\dotnet_toml_Tomlet.genruntimeconfig.cache
+D:\Documents\Projects\dotnet_toml_Tomlet\obj\Debug\net6.0\ref\dotnet_toml_Tomlet.dll

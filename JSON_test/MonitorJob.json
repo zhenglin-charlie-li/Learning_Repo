@@ -1,0 +1,486 @@
+{
+    "LogRules": {
+        "Rule1": "*,EW,*,ErrorAndWarning",
+        "Rule2": "*,I,*,Info"
+    },
+    "ErrorAndWarning": {
+        "MaxFiles": 10,
+        "MaxFileSize": 10000000,
+        "FileNameBase": "Local\\ErrorAndWarning",
+        "BufferSize": 10000
+    },
+    "Info": {
+        "MaxFiles": 10,
+        "MaxFileSize": 10000000,
+        "FileNameBase": "Local\\Info",
+        "BufferSize": 10000
+    },
+    "Email": {
+        "EmailTo": "stcacf"
+    },
+    "SearchGold": {
+        "SearchGoldRoot": "D:\\SearchGoldCF",
+        "SdExePath": "D:\\SearchGoldCF"
+    },
+    "Cosmos": {
+        "VC": "D:\\SearchGoldCF",
+        "VCProxy": ""
+    },
+    "Jobs": [
+        {
+            "JobName": "QueryBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\QueryBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\uxprod\\sensitivewordsblock\\SensitiveWords-cn-raw.txt"
+            ],
+            "FileGroupInGit": [
+                "sensitivewordsblock\\SensitiveWords-cn-raw.txt"
+            ],
+            "GitRoot": "D:\\source\\SensitiveWordsBlock",
+            "GitPAT": "",
+            "AzureDevOpsUrl": "https://dev.azure.com/msasg",
+            "AzureDevOpsProjectName": "Bing_UX",
+            "AzureDevOpsRepoName": "SensitiveWordsBlock",
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "WhitelistBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLineForPrefix",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\WhiteListQueryBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\latest\\urlexclusion\\WhiteListSites\\wl-filter-cn.csv;deploy\\builds\\data\\latest\\urlexclusion\\WhiteListSites\\Trie\\wl-filter-cn.trie64",
+                "deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\WhiteListSites\\wl-filter-cn.csv;deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\WhiteListSites\\Trie\\wl-filter-cn.trie64",
+                "deploy\\builds\\data\\uxprod\\sensitivewordsblock\\ExceptionWords-cn-raw.txt;"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "UrlBlock",
+            "Enabled": true,
+            "StringOperator": "ExtractUrl",
+            "StringCheck": "IsValidUrl",
+            "FileOperator": "AddUrlNewLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\ExcludeRequestInput",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\latest\\urlexclusion\\UrlExclusion-zh-CHS-revip-cn.csv;deploy\\builds\\data\\latest\\urlexclusion\\Trie\\UrlExclusion-zh-CHS-revip-cn.trie64",
+                "deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\UrlExclusion-zh-CHS-revip-cn.csv;deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\Trie\\urlExclusion-zh-CHS-revip-cn.trie64"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "QueryUnblock",
+            "Enabled": "",
+            "StringOperator": "",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\QueryUnBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\uxprod\\sensitivewordsblock\\SensitiveWords-cn-raw.txt"
+            ],
+            "FileGroupInGit": [
+                "sensitivewordsblock\\SensitiveWords-cn-raw.txt"
+            ],
+            "GitRoot": "D:\\source\\SensitiveWordsBlock",
+            "GitPAT": "",
+            "AzureDevOpsUrl": "https://dev.azure.com/msasg",
+            "AzureDevOpsProjectName": "Bing_UX",
+            "AzureDevOpsRepoName": "SensitiveWordsBlock",
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "WhitelistUnblock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\WhiteListQueryUnBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\latest\\urlexclusion\\WhiteListSites\\wl-filter-cn.csv;deploy\\builds\\data\\latest\\urlexclusion\\WhiteListSites\\Trie\\wl-filter-cn.trie64",
+                "deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\WhiteListSites\\wl-filter-cn.csv;deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\WhiteListSites\\Trie\\wl-filter-cn.trie64",
+                "deploy\\builds\\data\\uxprod\\sensitivewordsblock\\ExceptionWords-cn-raw.txt;"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "UrlUnblock",
+            "Enabled": true,
+            "StringOperator": "ExtractUrl",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\UnExcludeRequestInput",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\UrlExclusion-zh-CHS-revip-cn.csv;deploy\\builds\\data\\Indexserve\\Prod\\FastDeployData\\Trie\\urlExclusion-zh-CHS-revip-cn.trie64",
+                "deploy\\builds\\data\\latest\\urlexclusion\\UrlExclusion-zh-CHS-revip-cn.csv;deploy\\builds\\data\\latest\\urlexclusion\\Trie\\UrlExclusion-zh-CHS-revip-cn.trie64"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ImageAnswerBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLineForMM",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\MMImageAnswerBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\multimediaKifImageAnswer\\Image.BlackTriggers.zh-cn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "VideoAnswerBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLineForMM",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\MMVideoAnswerBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\multimediaKifVideoAnswer\\Video.BlackList.zh-cn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ImageAnswerUnblock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\MMImageAnswerUnBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\multimediaKifImageAnswer\\Image.BlackTriggers.zh-cn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "VideoAnswerUnblock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\MMVideoAnswerUnBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\multimediaKifVideoAnswer\\Video.BlackList.zh-cn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "CosmosWhitelistBlock",
+            "Enabled": true,
+            "StringOperator": "WordBreakForWhitelist",
+            "StringCheck": "",
+            "FileOperator": "AddKeyValue",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosWhitelistBlock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "CosmosGraylistBlock",
+            "Enabled": true,
+            "StringOperator": "WordBreakForGraylist",
+            "StringCheck": "",
+            "FileOperator": "AddKeyValue",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosGraylistBlock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "CosmosWhitelistUnblock",
+            "Enabled": true,
+            "StringOperator": "WordBreakForWhitelist",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosWhitelistUnblock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "CosmosGraylistUnblock",
+            "Enabled": true,
+            "StringOperator": "WordBreakForGraylist",
+            "StringCheck": "",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosGraylistUnblock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "ContainWhitelistBlock",
+            "Enabled": false
+        },
+        {
+            "JobName": "ContainGraylistBlock",
+            "Enabled": false
+        },
+        {
+            "JobName": "ContainWhitelistUnblock",
+            "Enabled": false
+        },
+        {
+            "JobName": "ContainGraylistUnblock",
+            "Enabled": false
+        },
+        {
+            "JobName": "CosmosContainlistBlock",
+            "Enabled": true,
+            "StringOperator": "WordBreak",
+            "StringCheck": "",
+            "FileOperator": "AddWordsToLineForContains",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosContainlistBlock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "CosmosContainlistUnblock",
+            "Enabled": true,
+            "StringOperator": "WordBreak",
+            "StringCheck": "",
+            "FileOperator": "RemoveWordsToLineForContains",
+            "LocalPath": "\\\\lsstc100\\d$\\CF_Pipeline\\LabelingMonitor\\CosmosContainlistUnblock",
+            "FileGroupInSourceDepot": [
+                ""
+            ],
+            "FilesInCosmos": "local/WebDefinitive/WebDefinitive.tsv"
+        },
+        {
+            "JobName": "ImageBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ImageBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\Multimedia\\ThumbnailProd\\Blockade\\ThumbnailIds\\BlockedIds.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ImageUnBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ImageUnBlock",
+            "FileGroupInSourceDepot": "[deploy\\builds\\data\\Multimedia\\ThumbnailProd\\Blockade\\ThumbnailIds\\BlockedIds.txt]",
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockzhcn",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockzhcn",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-cn.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-cn.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockzhhk",
+            "Enabled": "",
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockzhhk",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-hk.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-hk.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockzhtw",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockzhtw",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-tw.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-tw.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockjajp",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockjajp",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.ja-jp.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.ja-jp.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockkokr",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockkokr",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.ko-kr.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.ko-kr.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASBlockenus",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASBlockenus",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.en-us.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "RSBlockzhcn",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLineWithoutComment",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\RSBlockzhcn",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\querysuggestionanswerblocklist\\querysuggestion.blocklist.zhcn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "RSUnBlockzhcn",
+            "Enabled": false,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\RSUnBlockzhcn",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\ObjectStore\\Partners\\QueryFormulation\\PROD\\EmergencyBlocklist.tsv",
+                "deploy\\builds\\data\\answers\\querysuggestionanswerblocklist\\querysuggestion.blocklist.zhcn.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockzhcn",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockzhcn",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-cn.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-cn.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockzhhk",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockzhhk",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-hk.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-hk.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockzhtw",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockzhtw",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.zh-tw.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.zh-tw.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockjajp",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockjajp",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.ja-jp.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.ja-jp.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockkokr",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockkokr",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswercjkblocklist\\AutoSuggestAnswerBlocklist.ko-kr.gram.xml.blocklist.txt",
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.ko-kr.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "ASUnBlockenus",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\ASUnBlockenus",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\answers\\autosuggestanswerblocklist\\AutoSuggestAnswerBlocklist.en-us.gram.xml.blocklist.txt"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "DomainBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "AddNewLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\DomianBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\latest\\CrushLists\\V2\\GDI\\CJKTiered0BlockedURLs.wsv"
+            ],
+            "FilesInCosmos": ""
+        },
+        {
+            "JobName": "DomainUnBlock",
+            "Enabled": true,
+            "StringOperator": "",
+            "StringCheck": "IsValidLine",
+            "FileOperator": "RemoveExistingLine",
+            "LocalPath": "D:\\CF_Pipeline\\LabelingMonitor\\DomianUnBlock",
+            "FileGroupInSourceDepot": [
+                "deploy\\builds\\data\\latest\\CrushLists\\V2\\GDI\\CJKTiered0BlockedURLs.wsv"
+            ],
+            "FilesInCosmos": ""
+        }
+    ]
+}
