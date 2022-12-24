@@ -1,0 +1,5 @@
+<view wx:for="{{array}}">
+<view>{{index}} : {{item.descption}}</view>
+<image src="{{item.imgURL}}"></image>
+<view>\n</view>
+</view>

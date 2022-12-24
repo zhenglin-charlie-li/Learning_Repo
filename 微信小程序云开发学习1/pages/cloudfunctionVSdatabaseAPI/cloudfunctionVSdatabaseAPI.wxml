@@ -1,0 +1,2 @@
+<button bindtap="shujuku">数据库API获取数据</button>
+<button bindtap="yunhanshu">云函数获取数据</button>

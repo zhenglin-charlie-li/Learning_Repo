@@ -1,0 +1,2 @@
+<button bindtap="selectAndUpload">上传</button>
+<image src="{{imgURL}}"></image>

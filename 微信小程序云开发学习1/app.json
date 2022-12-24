@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index","pages/cloudfunctionVSdatabaseAPI/cloudfunctionVSdatabaseAPI",
+    "pages/getopenid/getopenid"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
