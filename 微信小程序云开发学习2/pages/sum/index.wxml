@@ -1,5 +1,0 @@
-<input bindinput="handleInput"></input>
-<text>\n</text>
-<input bindinput="handleInput1"></input>
-<button bindtap="handleTap">this is a button</button>
-<view>{{number}}</view>
