@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tesst</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            margin: 0 50px;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            background-color: darkgrey;
+        }
+
+        .item{
+            float: left;
+        }
+
+        .item:hover{
+            background-color: gray;
+        }
+
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .item a{
+            text-decoration: none;
+            font-size: 18px;
+            color: dimgrey;
+            padding: 0 30px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="clearfix"></div>
+
+<div class="box1">
+    <div class="item">
+        <a href="#">HTML/CSS</a>
+    </div>
+
+    <div class="item">
+        <a href="#">Browser Side</a>
+    </div>
+
+    <div class="item">
+        <a href="#">Serve Side</a>
+    </div>
+
+    <div class="item">
+        <a href="#">Programming</a>
+    </div>
+
+    <div class="item">
+        <a href="#">XML</a>
+    </div>
+
+    <div class="item">
+        <a href="#">Web Building</a>
+    </div>
+
+    <div class="item">
+        <a href="#">Reference</a>
+    </div>
+</div>
+
+</body>
+</html>
