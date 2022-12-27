@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuc</title>
+    <script>
+
+        function f(num2,num1) {
+            return [num2+num1,num2-num1,num2*num1,num2/num1];
+        }
+
+        var result = f(parseInt(prompt()),parseInt(prompt()))
+
+        alert(result);
+
+        var result = function () {
+            var out=0;
+            for (var i=0;i<arguments.length;i++){
+                out += arguments[i];
+            }
+            return out;
+        }
+
+        console.log(result(1,9,6,4));
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

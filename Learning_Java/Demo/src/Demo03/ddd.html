@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>el挂载点</title>
+</head>
+<body>
+{{message}}
+<h2 id="app">
+    {{message}}
+</h2>
+
+
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            message:'panda bear'
+        }
+    })
+</script>
+
+</body>
+</html>

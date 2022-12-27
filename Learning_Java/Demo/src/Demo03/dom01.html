@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom demo01</title>
+    <style>
+        div,p {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn01">this is a botton, click it to show current time</button>
+<button id = 'time'>click it to show current time</button>
+<div>some time</div>
+<p></p>
+<script>
+
+    var btn=document.getElementById('btn01');
+    btn.onclick = function(){
+        alert('yes!')
+    }
+    var p = document.querySelector('p');
+    var div = document.querySelector('div');
+    var time = document.getElementById('time');
+    time.onclick = function(){
+        div.innerText = 'today is 2020.5.11';
+    }
+    p.innerText = getData();
+
+    function getData(){
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        var dates = date.getDate();
+        var arr = ['1','2','3','4','5','6','7'];
+        var day = date.getDay();
+        return 'today is '+year+month+dates+arr[day];
+    }
+    console.log(getData());
+    
+
+</script>
+
+
+</body>
+</html>
