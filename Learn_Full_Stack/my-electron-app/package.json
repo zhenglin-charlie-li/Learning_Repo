@@ -1,14 +1,16 @@
 {
   "name": "my-electron-app",
+  "productName": "my-electron-app",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
   "version": "1.0.0",
-  "description": "Hello World!",
+  "author": "11258",
   "scripts": {
     "start": "electron ."
   },
-  "main": "main.js",
-  "author": "Zhenglin Li",
-  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "electron": "^22.0.1"
+    "electron": "22.0.1"
   }
 }
