@@ -11,7 +11,7 @@
   - By default, only track to your copy but not the original fork
   - `git remote add upstream https://github.com//.git`
 - Create a feature branch
-  - `git checkout -b name-of-branch`
+  - `git branch -b name-of-branch`
 - Commit contributions
 - Prepare pull request
   - `git checkout master`: Your copy of the original repository will invariably become stale. This is to keep up to date.
@@ -57,27 +57,3 @@ Topics
 Explore
 
 Finding good first issues: `github.com/<owner>/<repository>/contribute`
-
-<!-- test git rebase -->
-
-
-| :—-: | :—-: | :—-: | 
-
-| OpenStreetMap | 7 | 3 |
-
-
-
-
-
-
-
-
-| orgnization name | project proposed | project accepted |
-| :------- | :------: | -------: |
-| left     |  middle  |    right |
-
-
-
-
-
-<img align="left"  width="350"  src="https://github-readme-stats.vercel.app/api?username=Zhenglin-Li&show_icons=true&theme=gotham" alt="abhisheknaiidu" />
