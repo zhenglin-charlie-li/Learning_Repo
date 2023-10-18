@@ -24,5 +24,3 @@
 * [🖥 For Developers](use-cases/for-developers.md)
 
 ***
-
-* [Page 1](page-1.md)
