@@ -1,6 +1,6 @@
 # Table of contents
 
-* [339. Nested List Weight Sum](339.md)
+* [339. Nested List Weight Sum](README.md)
 
 ## template
 
