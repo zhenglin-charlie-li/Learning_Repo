@@ -1,26 +1,16 @@
 # Table of contents
 
-* [👋 Welcome to A Product](README.md)
+* [339. Nested List Weight Sum](README.md)
 
-## Overview
+## template
 
-* [💡 What we do](overview/what-we-do.md)
-* [✨ Our Features](overview/our-features.md)
-
-## Product Guides
-
-* [📪 Making a post](product-guides/making-a-post.md)
-* [📎 Understanding Projects](product-guides/understanding-projects.md)
-
-## Fundamentals
-
-* [🛠 Getting set up](fundamentals/getting-set-up/README.md)
-  * [📝 Setting permissions](fundamentals/getting-set-up/setting-permissions.md)
-  * [🧑 Inviting Members](fundamentals/getting-set-up/inviting-members.md)
-
-## Use Cases
-
-* [🎨 For Designers](use-cases/for-designers.md)
-* [🖥 For Developers](use-cases/for-developers.md)
-
-***
+* [💡 What we do](template/what-we-do.md)
+* [✨ Our Features](template/our-features.md)
+* [👋 Welcome to A Product](template/readme.md)
+* [📪 Making a post](template/making-a-post.md)
+* [📎 Understanding Projects](template/understanding-projects.md)
+* [🛠 Getting set up](template/getting-set-up/README.md)
+  * [📝 Setting permissions](template/getting-set-up/setting-permissions.md)
+  * [🧑 Inviting Members](template/getting-set-up/inviting-members.md)
+* [🎨 For Designers](template/for-designers.md)
+* [🖥 For Developers](template/for-developers.md)
