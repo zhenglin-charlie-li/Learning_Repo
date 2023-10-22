@@ -1,6 +1,7 @@
 # Table of contents
 
 * [README](README.md)
+* [Python for LeetCode](python-for-leetcode.md)
 * [Facebook Tag](facebook-tag/README.md)
   * [1762 Buildings With an Ocean View](facebook-tag/1762-buildings-with-an-ocean-view.md)
   * [314 Binary Tree Vertical Order Traversal](facebook-tag/314-binary-tree-vertical-order-traversal.md)
