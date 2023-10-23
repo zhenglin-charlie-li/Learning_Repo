@@ -12,4 +12,5 @@
   * [528 Random Pick with Weight](facebook-tag/528-random-pick-with-weight.md)
   * [339 Nested List Weight Sum](facebook-tag/339-nested-list-weight-sum.md)
   * [680 Valid Palindrome II](facebook-tag/680-valid-palindrome-ii.md)
+  * [249 Group Shifted Strings](facebook-tag/249-group-shifted-strings.md)
   * [973 K Closest Points to Origin](facebook-tag/973-k-closest-points-to-origin.md)
