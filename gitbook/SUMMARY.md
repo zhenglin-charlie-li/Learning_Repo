@@ -13,6 +13,7 @@
   * [528 Random Pick with Weight](facebook-tag/528-random-pick-with-weight.md)
   * [680 Valid Palindrome II](facebook-tag/680-valid-palindrome-ii.md)
   * [791 Custom Sort String](facebook-tag/791-custom-sort-string.md)
+  * [938 Range Sum of BST](facebook-tag/938-range-sum-of-bst.md)
   * [973 K Closest Points to Origin](facebook-tag/973-k-closest-points-to-origin.md)
   * [1249 Minimum Remove to Make Valid Parentheses](facebook-tag/1249-minimum-remove-to-make-valid-parentheses.md)
   * [1570 Dot Product of Two Sparse Vectors](facebook-tag/1570-dot-product-of-two-sparse-vectors.md)

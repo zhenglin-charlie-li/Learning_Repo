@@ -1,0 +1,104 @@
+# 938 Range Sum of BST
+
+[938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
+
+Given the `root` node of a binary search tree and two integers `low` and `high`, return _the sum of values of all nodes with a value in the **inclusive** range_ `[low, high]`.
+
+&#x20;
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/11/05/bst1.jpg)
+
+<pre><code><strong>Input: root = [10,5,15,3,7,null,18], low = 7, high = 15
+</strong><strong>Output: 32
+</strong><strong>Explanation: Nodes 7, 10, and 15 are in the range [7, 15]. 7 + 10 + 15 = 32.
+</strong></code></pre>
+
+**Example 2:**
+
+![](https://assets.leetcode.com/uploads/2020/11/05/bst2.jpg)
+
+<pre><code><strong>Input: root = [10,5,15,3,7,13,18,1,null,6], low = 6, high = 10
+</strong><strong>Output: 23
+</strong><strong>Explanation: Nodes 6, 7, and 10 are in the range [6, 10]. 6 + 7 + 10 = 23.
+</strong></code></pre>
+
+&#x20;
+
+**Constraints:**
+
+* The number of nodes in the tree is in the range `[1, 2 * 104]`.
+* `1 <= Node.val <= 105`
+* `1 <= low <= high <= 105`
+* All `Node.val` are **unique**.
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+class Solution:
+    def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
+        if not root:
+            return 0
+        
+        total = 0
+
+        if low <= root.val <= high:
+            total += root.val
+
+        left_sum = self.rangeSumBST(root.left, low, high)
+        right_sum = self.rangeSumBST(root.right, low, high)
+
+        total += left_sum
+        total += right_sum
+        
+        return total
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+class Solution:
+    def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
+        total = 0
+        
+        def dfs(root, low, high):
+            nonlocal total  # Declare total as nonlocal
+            if not root:
+                return 0
+            if low <= root.val <= high:
+                total += root.val
+                dfs(root.left, low, high)
+                dfs(root.right, low, high)
+            if root.val < low:
+                dfs(root.right, low, high)
+            if root.val > high:
+                dfs(root.left, low, high)
+        
+        dfs(root, low, high)
+        return total
+```
+{% endtab %}
+
+{% tab title="Python" %}
+<pre class="language-python"><code class="lang-python"><strong>class Solution:
+</strong>    def rangeSumBST(self, root: Optional[TreeNode], low: int, high: int) -> int:
+        total = 0
+        
+        def dfs(root, low, high):
+            nonlocal total  # Declare total as nonlocal
+            if not root:
+                return 0
+            if low &#x3C;= root.val &#x3C;= high:
+                total += root.val
+            if root.val > low:
+                dfs(root.left, low, high)
+            if root.val &#x3C; high:
+                dfs(root.right, low, high)
+        
+        dfs(root, low, high)
+        return total
+```
+</code></pre>
+{% endtab %}
+{% endtabs %}
