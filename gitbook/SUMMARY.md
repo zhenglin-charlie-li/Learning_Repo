@@ -13,4 +13,5 @@
   * [339 Nested List Weight Sum](facebook-tag/339-nested-list-weight-sum.md)
   * [680 Valid Palindrome II](facebook-tag/680-valid-palindrome-ii.md)
   * [249 Group Shifted Strings](facebook-tag/249-group-shifted-strings.md)
+  * [227 Basic Calculator II](facebook-tag/227-basic-calculator-ii.md)
   * [973 K Closest Points to Origin](facebook-tag/973-k-closest-points-to-origin.md)
