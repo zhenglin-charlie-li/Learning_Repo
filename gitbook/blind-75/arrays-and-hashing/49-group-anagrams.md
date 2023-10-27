@@ -50,18 +50,4 @@ class Solution:
         return anagrams_map.values()
 ```
 {% endtab %}
-
-{% tab title="Count" %}
-```python
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        anagrams_map = collections.defaultdict(list)
-
-        for each_str in strs:
-            sorted_str = "".join(sorted(each_str))
-            anagrams_map[sorted_str].append(each_str)
-
-        return anagrams_map.values()
-```
-{% endtab %}
 {% endtabs %}
