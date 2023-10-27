@@ -2,6 +2,13 @@
 
 * [README](README.md)
 * [Python for LeetCode](python-for-leetcode.md)
+* [Blind 75](blind-75/README.md)
+  * [Arrays & Hashing](blind-75/arrays-and-hashing/README.md)
+    * [217 Contains Duplicate](blind-75/arrays-and-hashing/217-contains-duplicate.md)
+    * [242 Valid Anagram](blind-75/arrays-and-hashing/242-valid-anagram.md)
+    * [1 Two Sum](blind-75/arrays-and-hashing/1-two-sum.md)
+    * [49 Group Anagrams](blind-75/arrays-and-hashing/49-group-anagrams.md)
+  * [53 Maximum Subarray](blind-75/53-maximum-subarray.md)
 * [Facebook Tag](facebook-tag/README.md)
   * [22 Generate Parentheses](facebook-tag/22-generate-parentheses.md)
   * [56 Merge Intervals](facebook-tag/56-merge-intervals.md)
