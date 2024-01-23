@@ -44,3 +44,6 @@
 * [1482. Minimum Number of Days to Make m Bouquets](1482.-minimum-number-of-days-to-make-m-bouquets.md)
 * [1283. Find the Smallest Divisor Given a Threshold](1283.-find-the-smallest-divisor-given-a-threshold.md)
 * [1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold](1292.-maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold.md)
+* [340. Longest Substring with At Most K Distinct Characters](340.-longest-substring-with-at-most-k-distinct-characters.md)
+* [505. The Maze II](505.-the-maze-ii.md)
+* [300. Longest Increasing Subsequence](300.-longest-increasing-subsequence.md)
