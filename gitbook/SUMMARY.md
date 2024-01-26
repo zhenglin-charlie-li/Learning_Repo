@@ -47,3 +47,6 @@
 * [340. Longest Substring with At Most K Distinct Characters](340.-longest-substring-with-at-most-k-distinct-characters.md)
 * [505. The Maze II](505.-the-maze-ii.md)
 * [300. Longest Increasing Subsequence](300.-longest-increasing-subsequence.md)
+* [283. Move Zeroes](283.-move-zeroes.md)
+* [16. 3Sum Closest](16.-3sum-closest.md)
+* [209. Minimum Size Subarray Sum](209.-minimum-size-subarray-sum.md)
