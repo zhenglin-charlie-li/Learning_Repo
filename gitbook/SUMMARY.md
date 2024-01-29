@@ -54,3 +54,7 @@
 * [339. Nested List Weight Sum](339.-nested-list-weight-sum.md)
 * [364. Nested List Weight Sum II](364.-nested-list-weight-sum-ii.md)
 * [124. Binary Tree Maximum Path Sum](124.-binary-tree-maximum-path-sum.md)
+* [78. Subsets](78.-subsets.md)
+* [90. Subsets II](90.-subsets-ii.md)
+* [77. Combinations](77.-combinations.md)
+* [17. Letter Combinations of a Phone Number](17.-letter-combinations-of-a-phone-number.md)
