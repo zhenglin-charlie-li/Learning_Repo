@@ -50,3 +50,4 @@
 * [283. Move Zeroes](283.-move-zeroes.md)
 * [16. 3Sum Closest](16.-3sum-closest.md)
 * [209. Minimum Size Subarray Sum](209.-minimum-size-subarray-sum.md)
+* [490. The Maze](490.-the-maze.md)
