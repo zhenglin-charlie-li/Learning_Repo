@@ -1,15 +1,14 @@
+import collections
 from typing import List
-from collections import deque
 
 
 class Solution:
-    def findBuildings(self, height: List[int]) -> List[int]:
-        if not height:
-            return []
-        max_height = -1
-        res = deque()
-        for i in range(len(height) - 1, -1, -1):
-            if height[i] > max_height:
-                max_height = height[i]
-                res.appendleft(i)
-        return list(res)
+    def findBuildings(self, heights: List[int]) -> List[int]:
+        max_height = 0
+        ans = collections.deque()
+        for i in range(len(heights) - 1, -1, -1):
+            v = heights[i]
+            if v > max_height:
+                ans.append(i)
+                max_height = v
+        return list(ans)
