@@ -19,7 +19,7 @@ Input: intervals = [(2,7)]Output: 1Explanation: Only need one meeting room
 ```
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Sweep Line " %}
 ```python
 class Solution:
     def min_meeting_rooms(self, intervals: List[Interval]) -> int:
@@ -43,7 +43,25 @@ class Solution:
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Heap" %}
+```python
+class Solution:
+    def min_meeting_rooms(self, intervals: List[Interval]) -> int:
+        if not intervals:
+            return 0
 
+        heap = []
+        meetings = sorted(intervals, key=lambda x: x.start)
+
+        for meeting in meetings:
+            start_time, end_time = meeting.start, meeting.end
+
+            if heap and heap[0] <= start_time:   
+                heapq.heappop(heap)
+
+            heapq.heappush(heap, end_time)
+
+        return len(heap)
+```
 {% endtab %}
 {% endtabs %}
