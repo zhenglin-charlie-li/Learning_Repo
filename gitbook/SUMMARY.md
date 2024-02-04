@@ -73,3 +73,4 @@
 * [920 · Meeting Rooms](920-meeting-rooms.md)
 * [208. Implement Trie (Prefix Tree)](208.-implement-trie-prefix-tree.md)
 * [212. Word Search II](212.-word-search-ii.md)
+* [588. Design In-Memory File System](588.-design-in-memory-file-system.md)
