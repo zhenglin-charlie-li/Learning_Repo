@@ -4,45 +4,27 @@ Description
 
 Given an array of meeting time intervals consisting of start and end times `[[s1,e1],[s2,e2],...] (si < ei)`, find the minimum number of conference rooms required.)
 
+
+
 Example
 
 **Example1**
 
 ```
-Input: intervals = [(0,30),(5,10),(15,20)]Output: 2Explanation:We need two meeting roomsroom1: (0,30)room2: (5,10),(15,20)
+Input: intervals = [(0,30),(5,10),(15,20)]
+Output: 2
+Explanation:We need two meeting roomsroom1: (0,30)room2: (5,10),(15,20)
 ```
 
 **Example2**
 
 ```
-Input: intervals = [(2,7)]Output: 1Explanation: Only need one meeting room
+Input: intervals = [(2,7)]
+Output: 1
+Explanation: Only need one meeting room
 ```
 
 {% tabs %}
-{% tab title="Sweep Line " %}
-```python
-class Solution:
-    def min_meeting_rooms(self, intervals: List[Interval]) -> int:
-        events = []
-
-        for interval in intervals:
-            start, end = interval.start, interval.end
-            events.append((start, 1))
-            events.append((end, -1))
-
-        events = sorted(events, key=lambda x:(x[0], x[1]))
-
-        rooms_in_use = 0
-        max_rooms = 0
-
-        for event in events:
-            rooms_in_use += event[1]
-            max_rooms = max(max_rooms, rooms_in_use)
-
-        return max_rooms
-```
-{% endtab %}
-
 {% tab title="Heap" %}
 ```python
 class Solution:
@@ -62,6 +44,34 @@ class Solution:
             heapq.heappush(heap, end_time)
 
         return len(heap)
+```
+{% endtab %}
+
+{% tab title="Sweep line" %}
+```python
+class Solution:
+    """
+    @param intervals: an array of meeting time intervals
+    @return: the minimum number of conference rooms required
+    """
+    def min_meeting_rooms(self, intervals: List[Interval]) -> int:
+        events = []
+
+        for interval in intervals:
+            start, end = interval.start, interval.end
+            events.append((start, 1))
+            events.append((end, -1))
+
+        events = sorted(events, key=lambda x:(x[0], x[1]))
+
+        rooms_in_use = 0
+        max_rooms = 0
+
+        for event in events:
+            rooms_in_use += event[1]
+            max_rooms = max(max_rooms, rooms_in_use)
+
+        return max_rooms
 ```
 {% endtab %}
 {% endtabs %}
