@@ -77,3 +77,5 @@
 * [130 · Heapify](130-heapify.md)
 * [Heap Implementation](heap-implementation.md)
 * [142. Linked List Cycle II](142.-linked-list-cycle-ii.md)
+* [206. Reverse Linked List](206.-reverse-linked-list.md)
+* [19. Remove Nth Node From End of List](19.-remove-nth-node-from-end-of-list.md)
